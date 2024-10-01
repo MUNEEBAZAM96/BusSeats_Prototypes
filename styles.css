@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.container {
+    margin-top: 50px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+    color: #ff9900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: textGlow 1.5s ease-in-out infinite alternate;
+}
+
+form {
+    margin-bottom: 20px;
+    animation: fadeInUp 0.7s ease-in-out;
+}
+
+input {
+    margin: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #444;
+    color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #ff9900;
+    box-shadow: 0 0 5px rgba(255, 153, 0, 0.8);
+}
+
+a{
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff9900;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff9900;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #ff7700;
+    transform: scale(1.05);
+}
+
+.seat-map {
+    margin-top: 20px;
+}
+
+.seats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+button.seat {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-color: #fff;
+    border: 2px solid #ff9900;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+button.seat:hover {
+    background-color: #ffcc00;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+}
+
+button.seat.selected {
+    background-color: #4CAF50;
+    animation: bounce 0.3s ease;
+}
+
+button.seat.reserved {
+    background-color: #f44336;
+    cursor: not-allowed;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.2);
+    }
+    60% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
